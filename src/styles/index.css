@@ -1,0 +1,7 @@
+/* Purpose: Load Tailwind CSS utilities and define the two brand typography tokens. */
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Roboto Condensed", sans-serif;
+  --font-body: "Roboto", sans-serif;
+}
