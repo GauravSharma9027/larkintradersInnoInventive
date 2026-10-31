@@ -20,12 +20,12 @@ export default function MainNavigation() {
 
   return (
     <header className="relative z-30 border-b border-slate-100 bg-white shadow-[0_2px_7px_rgba(4,36,75,0.08)]">
-      <div className="mx-auto flex min-h-[66px] max-w-[1440px] items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
+      <div className="mx-auto flex min-h-16.5 max-w-360 items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
         <Link to="/" aria-label="Larkin Traders home" className="shrink-0">
           <img
-            src="/assets/brand-logo-lockup-header-transparent.png"
+            src="/assets/Larkin Traders Corporate Logo.png"
             alt="Larkin Traders — Your Partner in Industrial Productivity"
-            className="h-auto w-[176px] object-contain sm:w-[205px] lg:w-[230px]"
+            className="h-auto w-42 object-contain sm:w-51.25 lg:w-50"
           />
         </Link>
 
@@ -45,7 +45,7 @@ export default function MainNavigation() {
 
         <Link
           to="/contact-us"
-          className="hidden shrink-0 items-center gap-2 rounded-[4px] bg-[#fb5805] px-3 py-3 text-[10px] font-extrabold text-white shadow-sm hover:bg-[#e94c00] lg:inline-flex"
+          className="hidden shrink-0 items-center gap-2 rounded-[4px] bg-[#fb5805] px-6 py-3 text-[10px] font-extrabold text-white shadow-sm hover:bg-[#e94c00] lg:inline-flex"
         >
           REQUEST A QUOTE <ArrowRight size={15} />
         </Link>

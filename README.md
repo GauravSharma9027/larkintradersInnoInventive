@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# larkintradersInnoInventive
+=======
 # Larkin Traders — React Homepage Demo
 
 A responsive React homepage reproduction based on the 1024 × 1536 client-provided mockup.
@@ -85,3 +88,4 @@ Contact details are copied from the supplied mockup. Confirm phone numbers, emai
 ## 9. Change scope
 
 Only the homepage is designed in this project delivery. Do not interpret placeholder routes as approved page designs. Keep new content and interactions aligned with the client-approved reference.
+>>>>>>> da59bcb (home page initial commit)

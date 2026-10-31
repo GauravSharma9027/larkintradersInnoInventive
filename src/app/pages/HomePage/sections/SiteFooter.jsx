@@ -1,5 +1,5 @@
 // Purpose: Render the footer brand, quick links, contact details, social links and closing tagline.
-import { Mail, MapPin, Phone, Youtube } from 'lucide-react';
+import { LucideYoutube, Mail, MapPin, Phone, Youtube } from 'lucide-react';
 import { Link } from 'react-router';
 
 const FOOTER_QUICK_LINKS = [
@@ -68,9 +68,9 @@ export default function SiteFooter() {
             <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="flex h-7 w-7 items-center justify-center rounded bg-[#087bb8] text-white hover:bg-[#06659a]">
               <span className="text-sm font-black">in</span>
             </a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube" className="flex h-7 w-7 items-center justify-center rounded bg-[#e62117] text-white hover:bg-[#bd1b13]">
-              <Youtube size={17} fill="white" />
-            </a>
+            {/* <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube" className="flex h-7 w-7 items-center justify-center rounded bg-[#e62117] text-white hover:bg-[#bd1b13]">
+              <LucideYoutube size={17} fill="white" />
+            </a> */}
           </div>
         </div>
 

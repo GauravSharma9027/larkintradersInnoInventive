@@ -1,34 +1,54 @@
-// Purpose: Reproduce the bottom blue contact banner and connect its quote and WhatsApp actions.
-import { ArrowRight, MessageCircle } from 'lucide-react';
-import { Link } from 'react-router';
+// Purpose: Display real HTML CTA copy and reusable action buttons over a photo-only handshake background.
+import { ArrowRight, MessageCircle } from "lucide-react";
+import Button from "../../../../components/ui/Button.jsx";
 
 const CONTACT_CTA = {
-  whatsappNumber: '919345347405',
-  message: 'Hello Larkin Traders, I would like to know more about your products and services.',
+  whatsappNumber: "919345347405",
+  message:
+    "Hello Larkin Traders, I would like to know more about your products and services.",
+  headline: "Let’s Build a Stronger, More Productive Tomorrow",
+  description:
+    "Get in touch with us for your product, service or automation requirements.",
 };
 
 export default function ContactCtaSection() {
   const whatsappUrl = `https://wa.me/${CONTACT_CTA.whatsappNumber}?text=${encodeURIComponent(CONTACT_CTA.message)}`;
 
   return (
-    <section aria-label="Contact Larkin Traders" className="relative mt-3 overflow-hidden bg-[#063365]">
-      <div className="relative hidden md:block">
-        <img src="/assets/cta-banner-reference.png" alt="Let's Build a Stronger, More Productive Tomorrow. Get in touch with us for your product, service or automation requirements." className="block h-auto w-full" loading="lazy" />
-        <Link to="/contact-us" aria-label="Request a quote" className="absolute left-[67.3%] top-[19%] h-[62%] w-[16%] rounded-md outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" />
-        <a href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="Chat with Larkin Traders on WhatsApp" className="absolute left-[84.8%] top-[19%] h-[62%] w-[13%] rounded-md outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" />
-      </div>
-      <div className="flex flex-col gap-3 bg-[linear-gradient(105deg,#052c5a,#07518c)] px-5 py-5 text-white md:hidden">
-        <div>
-          <h2 className="font-heading text-xl font-extrabold">Let’s Build a Stronger, More Productive Tomorrow</h2>
-          <p className="mt-1 text-xs leading-5 text-white/90">Get in touch with us for your product, service or automation requirements.</p>
+    <section
+      aria-label="Contact Larkin Traders"
+      className="relative isolate mt-3 py-6 overflow-hidden bg-[#032e5c] text-white"
+    >
+      <img
+        src="/assets/cta-handshake-photo-only.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-y-0 left-[37%] -z-20 hidden h-full w-[34%] object-cover object-center md:block"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 -z-10 hidden bg-[linear-gradient(100deg,#032e5c_0%,#064a7e_38%,rgba(3,46,92,0.18)_62%,#032e5c_100%)] md:block" />
+      <div className="mx-auto flex min-h-[74px] max-w-[1440px] flex-col justify-between gap-3 px-5 py-4 sm:px-7 md:h-[74px] md:min-h-0 md:flex-row md:items-center md:gap-4 md:px-[2.7%] md:py-0">
+        <div className="max-w-[610px]">
+          <h2 className="font-heading text-[18px] font-medium leading-[1.1] sm:text-xl md:text-[22px]">
+            {CONTACT_CTA.headline}
+          </h2>
+          <p className="mt-1 text-[11px] leading-[1.25] text-white/95 sm:text-[16px]">
+            {CONTACT_CTA.description}
+          </p>
         </div>
-        <div className="flex flex-wrap gap-2">
-          <Link to="/contact-us" className="inline-flex items-center gap-2 rounded bg-[#fb5805] px-4 py-2.5 text-[11px] font-extrabold text-white">
+        <div className="flex shrink-0 flex-wrap items-center gap-2 md:gap-3">
+          <Button to="/contact-us" size="large">
             REQUEST A QUOTE <ArrowRight size={14} />
-          </Link>
-          <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded bg-[#18b943] px-4 py-2.5 text-[11px] font-extrabold text-white">
-            <MessageCircle size={15} /> WhatsApp Us
-          </a>
+          </Button>
+          <Button
+            href={whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            variant="whatsapp"
+            size="large"
+          >
+            <MessageCircle size={16} /> WhatsApp Us
+          </Button>
         </div>
       </div>
     </section>

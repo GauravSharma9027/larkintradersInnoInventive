@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 export default function SectionHeading({ title, linkLabel, linkTo = '/' }) {
   return (
     <div className="mb-2 flex items-center justify-between gap-3">
-      <h2 className="font-heading text-[17px] font-extrabold leading-tight text-[#07356f] sm:text-[18px]">
+      <h2 className="font-heading text-[17px] font-extrabold leading-tight text-[#07356f] sm:text-[20px]">
         {title}
       </h2>
       {linkLabel ? (
