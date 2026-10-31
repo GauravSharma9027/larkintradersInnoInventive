@@ -22,7 +22,7 @@ const HERO_CONTENT = {
 
 // This file is expected at: public/CNC Machinery in a Blue Tech Factory.png
 const HERO_BACKGROUND_IMAGE =
-  "url('../public/assets/CNC Machinery in a Blue Tech Factory.png')";
+  "url('/assets/CNC Machinery in a Blue Tech Factory.png')";
 
 export default function HeroSection() {
   return (
